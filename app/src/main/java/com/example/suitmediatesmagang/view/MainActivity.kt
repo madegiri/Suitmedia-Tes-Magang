@@ -15,19 +15,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnCheck.setOnClickListener {
-            val sentence = binding.etPalindrome.text.toString()
+            val sentence = binding.etPalindrome.text.toString().trim()
             if (sentence.isNotEmpty()) {
                 val isPalindrome = isPalindrome(sentence)
                 showDialog(if (isPalindrome) "isPalindrome" else "not palindrome")
+            } else {
+                showDialog("Please enter a sentence to check")
             }
         }
 
         binding.btnNext.setOnClickListener {
-            val name = binding.etName.text.toString()
+            val name = binding.etName.text.toString().trim()
             if (name.isNotEmpty()) {
                 val intent = Intent(this, SecondActivity::class.java)
                 intent.putExtra("name", name)
                 startActivity(intent)
+            } else {
+                showDialog("Please enter your name")
             }
         }
     }
