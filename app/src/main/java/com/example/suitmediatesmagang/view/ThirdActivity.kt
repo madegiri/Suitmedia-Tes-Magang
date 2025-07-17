@@ -21,9 +21,16 @@ class ThirdActivity : AppCompatActivity() {
         binding = ActivityThirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupBackButton()
         setupRecyclerView()
         setupViewModel()
         setupSwipeRefresh()
+    }
+
+    private fun setupBackButton() {
+        binding.ivBack.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     private fun setupRecyclerView() {

@@ -14,6 +14,17 @@ class SecondActivity : AppCompatActivity() {
         binding = ActivitySecondBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setupBackButton()
+        setupUI()
+    }
+
+    private fun setupBackButton() {
+        binding.ivBack.setOnClickListener {
+            onBackPressed()
+        }
+    }
+
+    private fun setupUI() {
         userName = intent.getStringExtra("name") ?: ""
         binding.tvUserName.text = userName
 
