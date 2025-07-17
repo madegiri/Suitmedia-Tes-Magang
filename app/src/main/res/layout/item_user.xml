@@ -17,7 +17,6 @@
         android:padding="20dp"
         android:gravity="center_vertical">
 
-        <!-- Avatar with circular shape and subtle border -->
         <FrameLayout
             android:layout_width="56dp"
             android:layout_height="56dp"
@@ -32,7 +31,6 @@
 
         </FrameLayout>
 
-        <!-- User info with better typography -->
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"

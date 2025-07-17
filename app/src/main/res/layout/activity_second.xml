@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Header with back arrow and title -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -33,7 +32,6 @@
 
     </RelativeLayout>
 
-    <!-- Content area -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
